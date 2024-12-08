@@ -22,7 +22,7 @@ public class JwtUtil {
                 .builder() // new jwt builder instance
                 .setSubject(username) // set the subclaim to the username
                 .setIssuedAt(new Date()) // sets the issued at data to the current date
-                .setExpiration(new Date(System.currentTimeMillis() + 10)) //token expires in 10 hours
+                .setExpiration(new Date(System.currentTimeMillis()  + 1000 * 60 * 60 * 10)) //token expires in 10 hours
                 .signWith(SignatureAlgorithm.HS256, SECRET_KEY) // signs the token with the HMAC SHA-256 algorithm and the secret key
                 .compact(); // compacts jwt into string form
     }

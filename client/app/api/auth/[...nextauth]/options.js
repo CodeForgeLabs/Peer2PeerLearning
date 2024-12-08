@@ -69,9 +69,7 @@ export const options = {
       }
         return token;
       },
-      pages: {
-        error: "/auth/errorwefw", // Optional: Redirect to custom error page
-      },
+    
       
   }
 

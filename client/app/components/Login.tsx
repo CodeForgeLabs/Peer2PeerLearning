@@ -27,7 +27,7 @@ const Login = () => {
     }
     else{
       
-      console.log("error happend")
+      
       setErr(res?.error  || " ")
     }
     
